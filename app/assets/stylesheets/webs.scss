@@ -1,0 +1,107 @@
+// Place all the styles related to the webs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// 여긴 다 내가 적은 것!// 
+
+
+
+
+#mainn {
+    height : 400px;
+    width : 100%;
+    background : url('sakura.jpg');
+    background-size : cover;
+    background-position : center center;
+    background-repeat : no-repeat;
+}
+
+#maintitle {
+    width : 850px;
+    font-size : 70px;
+    color : white;
+    text-shadow : -1px 0 #808080, 0 1px #808080, 1px 0 #808080, 0 -1px #808080;
+    font-family : 'Hanna', serif;
+    margin : 0 auto;
+    padding-top : 150px;
+    text-align : center;
+}
+
+
+// 정보상자 
+#collect {
+    width : 100%;
+    font-size : 16px ;
+    margin : 0 auto ;
+    padding : 30px;
+    // background-color : white;
+    // background-color : rgba(240, 193, 190, 1);
+    // background-color: rgba(170,219,241,0.5);
+    // background-color : rgba(256, 224, 220, 1);
+    // background-color : rgba(157, 225, 244, 1);
+    background-color : #fcd1d7;
+}
+
+.basic {
+    margin : 0 auto ;
+    width : 850px;
+    
+}
+
+.topword {
+    font-family: 'Hanna', serif;
+    font-size : 20px;
+    
+}
+
+input#post_name {
+    margin : 0 auto;
+    width : 850px;
+}
+
+textarea#post_content {
+    resize : none;
+    height : 200px;
+    margin : 0 auto;
+    width : 850px;
+}
+
+
+#submit {
+    float : right;
+    font-family: 'Hanna', serif;
+}
+
+#outputt {
+    width : 100%;
+    font-size : 20px ;
+    margin : 0 auto ;
+    padding : 30px;
+    // background-color : white;
+    // background-color : rgba(240, 193, 190, 1);
+    // background-color: rgba(170,219,241,0.5);
+    // background-color : rgba(256, 224, 220, 1);
+    // background-color : rgba(157, 225, 244, 1);
+    background-color : 	#ffe7de;
+    font-family : 'Nanum Pen Script', serif;
+}
+
+#inputt {
+    width : 900px;
+    margin : 0 auto;
+    margin-top : 50px;
+    margin-bottom : 50px;
+    border : 2px dotted #c3829e;
+    padding : 30px;
+    border-radius : 30px;
+    border-bottom : 2px dotted #562135;
+    border-right : 2px dotted #562135;
+}
+
+#inputt_writer, #inputt_date {
+    text-align : right;
+}
+
+#inputt_content {
+    text-align : left;
+}

@@ -1,0 +1,69 @@
+
+<div id = "mainn">
+    
+    <div id = "maintitle">
+        WELCOME TO 희나무숲
+    </div>
+    
+
+</div>
+
+
+
+<div id = "collect"> 
+    
+    <%= form_for @post do |f| %>
+        <div class = "basic">
+            <div class ="topword"> | 이름 | </div> 
+            <div id ="down"> <%= f.text_field :name %> </div> <br>
+            
+            <div class ="topword"> | 내용 | </div> 
+            <div id ="downn"> <%= f.text_area :content %> </div> <br>
+            
+            <div id = "submit"> <%= f.submit "제출" %> </div> <br><br>
+            <!--<%#= image_submit_tag("submit.png", data: { confirm: "저장하시겠습니까?" }, id: "img.submit") %>-->
+        </div>
+    <% end %>
+    
+</div>
+
+<div id = "outputt">
+    
+    <% @posts.each_with_index do |p, index| %>
+    
+        <div id = "inputt"> 
+            <div id = "inputt_num"> #<%= index + 1 %>번째 손님 <br> </div> 
+            <div id = "inputt_writer"> 작성자 : <%= p.name %> <br> </div>
+            <div id = "inputt_date"> 작성시간 : <%= p.created_at %> <br> </div>
+            <div id = "inputt_content"> <%= p.content %> <br> </div>
+        </div>
+    
+    <% end %> <br>
+</div>
+
+<!--짝수번째 글, 홀수번째 글 나눠서 배경색을 다르게 해주고 싶었는데 실패..-->
+
+<!--<div id = "outputt">-->
+    
+<!--    <%#= @posts.each_with_index do |p, index| %>-->
+    
+<!--        <%#= if index%2 == 0 %>-->
+<!--            <div id = "inputt1" class = "inputt">-->
+<!--               <div id = "inputt_num"> #<%#= index + 1 %>번째 손님 <br> </div> -->
+<!--                <div id = "inputt_writer"> 작성자 : <%#= p.name %> <br> </div>-->
+<!--                <div id = "inputt_content"> <%#= p.content %> <br> </div>-->
+<!--            </div>-->
+            
+<!--        <%#= else %>-->
+<!--            <div id = "inputt2" class = "inputt">-->
+<!--               <div id = "inputt_num"> #<%#= index + 1 %>번째 손님 <br> </div> -->
+<!--                <div id = "inputt_writer"> 작성자 : <%#= p.name %> <br> </div>-->
+<!--                <div id = "inputt_content"> <%#= p.content %> <br> </div>-->
+<!--            </div>-->
+            
+<!--        <%# end %>-->
+        
+<!--    <%# end %> <br>-->
+<!--</div>-->
+
+<!------------------------------------------------------------------------>
