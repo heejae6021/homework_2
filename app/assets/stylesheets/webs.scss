@@ -4,12 +4,14 @@
 
 // 여긴 다 내가 적은 것!// 
 
-
+// * {
+//     box-sizing : border-box ;
+// }
 
 
 #mainn {
     height : 400px;
-    width : 100%;
+    width : 1425px;
     background : url('sakura.jpg');
     background-size : cover;
     background-position : center center;
@@ -30,7 +32,7 @@
 
 // 정보상자 
 #collect {
-    width : 100%;
+    width : 1425px;
     font-size : 16px ;
     margin : 0 auto ;
     padding : 30px;
@@ -73,7 +75,7 @@ textarea#post_content {
 }
 
 #outputt {
-    width : 100%;
+    width : 1425px;
     font-size : 20px ;
     margin : 0 auto ;
     padding : 30px;
@@ -98,10 +100,11 @@ textarea#post_content {
     border-right : 2px dotted #562135;
 }
 
-#inputt_writer, #inputt_date {
+#inputt_writer, #inputt_date, #inputt_editdelete {
     text-align : right;
 }
 
 #inputt_content {
     text-align : left;
+    white-space : pre-line;
 }

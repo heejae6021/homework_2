@@ -1,0 +1,30 @@
+<div id = "mainn">
+    
+    <div id = "maintitle">
+        WELCOME TO 희나무숲
+    </div>
+    
+
+</div>
+
+
+
+<div id = "collect"> 
+    
+    <%= form_for @post do |f| %>
+        <div class = "basic">
+            <div class ="topword"> |  카테고리  | </div>
+            <div id ="down"> <%= f.select :category_id, options_from_collection_for_select(@categories, "id", "name") %> </div> <br>
+             
+            <div class ="topword"> |  이름  | </div> 
+            <div id ="down"> <%= f.text_field :name %> </div> <br>
+            
+            <div class ="topword"> |  내용  | </div> 
+            <div id ="downn"> <%= f.text_area :content %> </div> <br>
+            
+            <div id = "submit"> <%= f.submit "수정" %> </div> <br><br>
+            <!--<%#= image_submit_tag("submit.png", data: { confirm: "저장하시겠습니까?" }, id: "img.submit") %>-->
+        </div>
+    <% end %>
+    
+</div>

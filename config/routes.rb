@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
   
 
-  get 'main' => 'webs#index'
+  get 'main' => 'posts#index'
   
-  post 'posts' => 'webs#create'
+  post 'posts' => 'posts#create'
   
-  get 'webs/new' => 'webs#new', as: "webs_new"
+  get 'posts/new' => 'posts#new', as: "new_post"
   
-  root 'webs#index'
+  root 'posts#index'
   
-  resources :posts
+  resources 'posts'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

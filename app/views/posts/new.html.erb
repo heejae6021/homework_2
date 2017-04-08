@@ -14,10 +14,13 @@
     
     <%= form_for @post do |f| %>
         <div class = "basic">
-            <div class ="topword"> | 이름 | </div> 
+            <div class ="topword"> |  카테고리  | </div>
+            <div id ="down"> <%= f.select :category_id, options_from_collection_for_select(@categories, "id", "name") %> </div> <br>
+             
+            <div class ="topword"> |  이름  | </div> 
             <div id ="down"> <%= f.text_field :name %> </div> <br>
             
-            <div class ="topword"> | 내용 | </div> 
+            <div class ="topword"> |  내용  | </div> 
             <div id ="downn"> <%= f.text_area :content %> </div> <br>
             
             <div id = "submit"> <%= f.submit "제출" %> </div> <br><br>
@@ -29,13 +32,15 @@
 
 <div id = "outputt">
     
-    <% @posts.each_with_index do |p, index| %>
+    <% @posts.each do |p| %>
     
         <div id = "inputt"> 
-            <div id = "inputt_num"> #<%= index + 1 %>번째 손님 <br> </div> 
+            <div id = "inputt_num"> #<%= p.id %>번째 손님 <br> </div>
+            <div id = "inputt_category"> #카테고리는 <%= p.category.name %> <br> </div>
             <div id = "inputt_writer"> 작성자 : <%= p.name %> <br> </div>
-            <div id = "inputt_date"> 작성시간 : <%= p.created_at %> <br> </div>
+            <div id = "inputt_date"> 작성시간 : <%= p.updated_at.in_time_zone('Seoul').strftime("%Y. %b. %d. %H:%M") %> <br> </div>
             <div id = "inputt_content"> <%= p.content %> <br> </div>
+            <div id = "inputt_editdelete"> <%= link_to "수정", edit_post_path(p.id) %> <%= link_to "삭제", p, method: :delete, data: { confirm: '삭제하지말아주세요ㅠㅠ' } %> </div>
         </div>
     
     <% end %> <br>
